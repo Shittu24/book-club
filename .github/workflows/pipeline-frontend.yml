@@ -12,7 +12,7 @@ on:
 jobs:
   build-image:
     name: Build FE Docker image
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -41,7 +41,7 @@ jobs:
 
   deploy:
     name: Deploy Frontend
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [build-image]
     steps:
       - name: Create deployment folder
@@ -60,7 +60,7 @@ jobs:
 
 #  health-check:
 #    name: UI Health Check
-#    runs-on: ubuntu-latest
+#    runs-on: self-hosted
 #    needs: [deploy]
 #    steps:
 #      - name: Check the docker container health status
