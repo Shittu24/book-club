@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import {FormsModule} from '@angular/forms';
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
-import {HttpTokenInterceptor} from './services/interceptor/http-token.interceptor';
+import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpTokenInterceptor } from './services/interceptor/http-token.interceptor';
 import { ActivateAccountComponent } from './pages/activate-account/activate-account.component';
-import {CodeInputModule} from 'angular-code-input';
+import { CodeInputModule } from 'angular-code-input';
+import { ApiModule } from './services/api.module';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import {CodeInputModule} from 'angular-code-input';
     RegisterComponent,
     ActivateAccountComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule,
-        CodeInputModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    CodeInputModule,
+    ApiModule.forRoot({ rootUrl: 'http://192.168.0.227:2000/api/v1' })
+  ],
   providers: [
     HttpClient,
     {
