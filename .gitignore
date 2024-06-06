@@ -1,0 +1,9 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.uploads
+docker-compose.yml
+init.sql
+/docker
