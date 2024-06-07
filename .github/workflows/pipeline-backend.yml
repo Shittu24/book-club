@@ -26,6 +26,9 @@ jobs:
           java-version: "17"
           distribution: "corretto"
 
+      - name: Set executable permissions for mvnw
+        run: chmod +x ./book-network/mvnw
+
       - name: Running Unit Tests
         run: |
           cd book-network
