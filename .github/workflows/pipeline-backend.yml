@@ -70,7 +70,7 @@ jobs:
       - name: Compile project
         run: |
           cd book-network
-          ./mvnw clean package
+          chmod +x ./mvnw clean package
 
   build-image:
     name: Build Docker image
