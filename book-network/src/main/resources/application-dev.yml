@@ -40,6 +40,7 @@ application:
       activation-url: http://localhost:4200/activate-account
     cors:
       origins: http://localhost:2000, http://localhost:4200
+      # modified
   file:
     uploads:
       photos-output-path: ./uploads
