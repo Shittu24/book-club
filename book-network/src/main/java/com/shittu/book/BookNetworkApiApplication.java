@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @EnableAsync
-@SpringBootApplication
+@SpringBootApplication(exclude = { MailSenderAutoConfiguration.class })
 public class BookNetworkApiApplication {
 
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/book_social_network
+    url: jdbc:postgresql://70.228.121.122:5432/book_social_network
     username: ibrah
     password: arsenalFC
     driver-class-name: org.postgresql.Driver

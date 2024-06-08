@@ -52,10 +52,10 @@ jobs:
           java-version: "17"
           distribution: "corretto"
 
-      # - name: Running Unit Tests
-      #   run: |
-      #     cd book-network
-      #     ./mvnw clean test
+      - name: Running Unit Tests
+        run: |
+          cd book-network
+          ./mvnw clean test
 
   build:
     runs-on: ubuntu-latest
